@@ -90,6 +90,11 @@ with st.form("mental_health_form"):
     submitted = st.form_submit_button("🔍 Predict")
     st.markdown('</div>', unsafe_allow_html=True)
 
+df = pd.DataFrame([[work_hours, Family_history, sleep, stress,
+                        physical_activity, social_interaction, Diet]],
+                      columns=['Work Hours', 'Family History', 'Sleep Hours',
+                               'Stress Level', 'Physical Activity',
+                               'Social Interaction', 'Diet Quality'])
 # Model prediction
 if submitted:
     with open("encoder.pkl", 'rb') as file:
