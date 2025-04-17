@@ -9,3 +9,4 @@ scikit-learn==1.5.1
 seaborn==0.13.2 
 streamlit==1.31.1 
 xgboost==2.1.1
+langchain-google-genai==2.0.1
