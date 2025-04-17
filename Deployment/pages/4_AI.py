@@ -62,7 +62,8 @@ if st.button("Get Answer") and question.strip() != "":
     ])
 
     api_key = "AIzaSyC9j5KaPVcanw9nvPAfKfORBqsCzBjx37I"
-    genai_model = ChatGoogleGenerativeAI(api_key=api_key, model="gemini-2.0-flash")
+    # genai_model = ChatGoogleGenerativeAI(api_key=api_key, model="gemini-2.0-flash")
+    genai_model = ChatGoogleGenerativeAI(api_key=api_key, model="gemini-1.5-flash")
     output_parser = StrOutputParser()
     chain = prompt_template | genai_model | output_parser
 
