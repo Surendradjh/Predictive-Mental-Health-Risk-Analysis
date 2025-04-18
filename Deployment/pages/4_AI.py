@@ -48,7 +48,7 @@ st.markdown("<hr>", unsafe_allow_html=True)
 question = st.text_input("**Get answers with AI**", placeholder="Ex:- What is the status about my health?")
 if st.button("Get Answer") and question.strip() != "":
     prompt_template = ChatPromptTemplate(messages=[
-        ("system", "You are an AI assistant focused on improving mental health by providing tailored suggestions based on the user's details. "
+        ("system", "You are an AI assistant focused on improving mental health by providing tailored suggestions based on the user's provided details only. "
                "Suggest simple and effective daily activities that align with the user's lifestyle. "
                "When the user asks about health-related topics, explain the health condition based on the details provided. "
                "If the question is unclear or irrelevant, ask the user to enter a proper question. "
