@@ -68,7 +68,7 @@ if st.button("Get Answer") and question.strip() != "":
 
     # Get personalized suggestion
     tips = chain.invoke({
-        "activity_details": str(df),
+        "activity_details": df,
         "question": question
     })
 
