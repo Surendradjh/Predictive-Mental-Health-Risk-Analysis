@@ -48,12 +48,12 @@ st.markdown("<hr>", unsafe_allow_html=True)
 question = st.text_input("**Get answers with AI**", placeholder="Ex:- What is the status about my health?")
 if st.button("Get Answer") and question.strip() != "":
     prompt_template = ChatPromptTemplate(messages=[
-        ("system", "You're an AI mental health improving suggester based on the user's details. "
-                "Suggest simple and effective daily activities that match their lifestyle, such as listening to music, "
-                "maintaining a proper diet, improving social interactions, and similar beneficial habits. "
-                "Based on the details and question, explain the health condition when the question is related to health if the question is not right one then return enter the proper question. "
-                "Return suggestions with 2 lines of explanation."),
-        ("human", "Here's my details about daily activities: {activity_details} and my question: {question}")
+        ("system", "You are an AI assistant focused on improving mental health by providing tailored suggestions based on the user's details. "
+               "Suggest simple and effective daily activities that align with the user's lifestyle. "
+               "When the user asks about health-related topics, explain the health condition based on the details provided. "
+               "If the question is unclear or irrelevant, ask the user to enter a proper question. "
+               "Provide suggestions with a brief two-line explanation."),
+        ("human", "Here's my daily activity details: {activity_details} and my question: {question}")
     ])
     api_key = "AIzaSyC9j5KaPVcanw9nvPAfKfORBqsCzBjx37I"
     genai_model = ChatGoogleGenerativeAI(api_key=api_key, model="gemini-2.0-flash")
