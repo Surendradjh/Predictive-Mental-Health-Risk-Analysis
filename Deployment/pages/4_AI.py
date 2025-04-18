@@ -52,6 +52,7 @@ if st.button("Get Answer") and question.strip() != "":
                "Suggest simple and effective daily activities that align with the user's lifestyle. "
                "When the user asks about health-related topics, explain the health condition based on the details provided. "
                "If the question is unclear or irrelevant, ask the user to enter a proper question. "
+               "Based on the user details you have to return the suggestions"
                "Provide suggestions with a brief two-line explanation."),
         ("human", "Here's my daily activity details: {activity_details} and my question: {question}")
     ])
