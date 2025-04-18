@@ -75,12 +75,14 @@ with st.form("mental_health_form"):
     col1, col2 = st.columns(2)
 
     with col1:
+        Gender = st.selectbox("Gender",("Male","Female","Others")
         work_hours = st.number_input("🕒 Working hours per week", min_value=20, max_value=70)
         Family_history = st.selectbox("👨‍👩‍👧 Family history of mental health issues?", ("Yes", "No"))
         sleep = st.number_input("😴 Sleep hours per day", min_value=4, max_value=10)
         Diet = st.selectbox("🍽️ Diet quality", ("Good", "Average", "Poor"))
 
     with col2:
+        Age = st.number_input("Age",min_value=18,max_value=100)
         stress = st.slider("😰 Stress levels (1-10)", min_value=0, max_value=10)
         physical_activity = st.number_input("🏃 Physical activity (minutes/day)", min_value=0, max_value=180)
         social_interaction = st.slider("🗣️ Social interaction level (1-10)", min_value=0, max_value=10)
@@ -90,9 +92,9 @@ with st.form("mental_health_form"):
     submitted = st.form_submit_button("🔍 Predict")
     st.markdown('</div>', unsafe_allow_html=True)
 
-df = pd.DataFrame([[work_hours, Family_history, sleep, stress,
+df = pd.DataFrame([[Gender,Age,work_hours, Family_history, sleep, stress,
                         physical_activity, social_interaction, Diet]],
-                      columns=['Work Hours', 'Family History', 'Sleep Hours',
+                      columns=['Gender','Age','Work Hours', 'Family History', 'Sleep Hours',
                                'Stress Level', 'Physical Activity',
                                'Social Interaction', 'Diet Quality'])
 # Model prediction
