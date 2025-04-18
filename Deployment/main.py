@@ -75,7 +75,7 @@ with st.form("mental_health_form"):
     col1, col2 = st.columns(2)
 
     with col1:
-        Gender = st.selectbox("Gender",("Male","Female","Others")
+        Gender = st.selectbox("Gender",("Male","Female","Others"))
         work_hours = st.number_input("🕒 Working hours per week", min_value=20, max_value=70)
         Family_history = st.selectbox("👨‍👩‍👧 Family history of mental health issues?", ("Yes", "No"))
         sleep = st.number_input("😴 Sleep hours per day", min_value=4, max_value=10)
